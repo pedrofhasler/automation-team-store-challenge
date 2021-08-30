@@ -29,11 +29,13 @@ for link in productlinks:
     brand = soup.find('div', class_='product-brand hide-mobile').text.strip()
     price = soup.find('span', class_='catalog-detail-price-value').text.strip()
     image = soup.find('div', class_='gallery-preview')
+    description = soup.find('p', class_='product-information-description').text.strip()
     product = {
         'name': name,
         'brand': brand,
         'price': price,
         'img': image['data-img-zoom'],
+        'description': description
     }
     products_meta.append(product)
 
