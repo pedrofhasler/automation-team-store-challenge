@@ -49,3 +49,5 @@ Irei deixar um superuser criado para testes
 
 Login:admin
 Password:admin
+
+https://api-dafiti-pedrohasler.herokuapp.com
