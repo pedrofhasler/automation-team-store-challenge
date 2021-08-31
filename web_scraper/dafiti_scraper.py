@@ -35,7 +35,8 @@ for link in productlinks:
         'brand': brand,
         'price': price,
         'img': image['data-img-zoom'],
-        'description': description
+        'description': description,
+        'url': link
     }
     products_meta.append(product)
 
