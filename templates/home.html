@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container my-3">
+    <h1 class="font-weight-bold">Olá!</h1>
+    <p>
+        Esse é um site para mostrar ao usuário as ofertas de outlet no site da Dafiti separados pelas marcas. 
+
+    </p>
+    <p>
+        Foram retirados alguns produtos do site apartir de web scraping, utilizando BeatifulSoup e requests, e adicionados no banco de dados apartir de um arquivo csv. A extração dos dos dados foi feita para pegar qualquer seja o tipo dos produtos, porém, foi criado um filtro para separá-los em suas marcas/brand visando a proporcionar o usuário a escolher a que mais o/a agrada.
+    </p>
+</div>
+
+{% endblock content %}
