@@ -32,6 +32,17 @@ Agora você pode ir para http://localhost:8000 para ver o site ou http://localho
 - Postgre SQL
 - pandas
 
+## CSV Upload
+
+Para utilizar o upload de csv o arquivo deve ter essas formatação
+
+name|brand|price|img|description|url
+
+String|String|"R$ xx,xx"|Url da imagem|String|Url da Página do produto
+
+O link para utilizar o end point pode ser encontrado em http://localhost:8000/admin/products/product/ 
+ou acessado diretamente em http://localhost:8000/admin/products/product/upload-csv/
+
 ## Deploy no Heroku
 
 Irei deixar um superuser criado para testes
