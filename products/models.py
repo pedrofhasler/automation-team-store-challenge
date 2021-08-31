@@ -11,7 +11,7 @@ class AvailableManager(models.Manager):
 
 class Category(TimeStampedModel):
     name = models.CharField(max_length=255, unique=True)
-    slug = AutoSlugField(unique=True, always_update=False, populate_from="name")
+    slug = AutoSlugField(unique=True, max_length=255, always_update=False, populate_from="name")
 
     class Meta:
         ordering = ("name",)
@@ -30,12 +30,12 @@ class Product(TimeStampedModel):
         Category, related_name="products", on_delete=models.CASCADE
     )
     name = models.CharField(max_length=255)
-    slug = AutoSlugField(unique=True, always_update=False, populate_from="name")
-    image = models.ImageField(upload_to="products/%Y/%m/%d", blank=True)
+    slug = AutoSlugField(unique=True, max_length=255, always_update=False, populate_from="name")
+    image = models.ImageField(upload_to="products", blank=True)
     description = models.TextField(blank=True)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     is_available = models.BooleanField(default=True)
-
+    url = models.URLField(max_length=200, blank=True)
     objects = models.Manager()
     available = AvailableManager()
 
